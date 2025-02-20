@@ -9,7 +9,7 @@ const newsImg = document.querySelector('.news-img');
 let fetchNews = async()=>{
   const query = searchInput.value || 'latest';
   const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`
-
+  console.log(url);
   try{
     const response = await fetch(url);
     const data = await response.json();
